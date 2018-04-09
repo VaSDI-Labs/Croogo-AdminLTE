@@ -1,0 +1,129 @@
+
+/* Start Table Actions */
+table .item-actions {
+    white-space: nowrap;
+}
+
+table .item-actions a {
+    margin-right: 10px
+}
+
+table .item-actions a.icon-trash,
+table .item-actions a.delete {
+    color: #9d261d
+}
+
+table .item-actions a.icon-trash:hover,
+table .item-actions a.delete:hover {
+    color: #310c09
+}
+
+table .item-actions a [class^="fa-"],
+table .item-actions a [class*=" fa-"] {
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -15%;
+}
+/* End */
+
+
+textarea.form-control {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+#permissions-tab + .tab-content {
+    padding: 0;
+}
+
+.permission-toggle:hover {
+    cursor: pointer
+}
+
+.permission-toggle.permission-disabled {
+    color: #555;
+    cursor: text
+}
+
+.perm-collapse {
+    padding-left: 15px
+}
+
+.perm-expand {
+    padding-left: 15px
+}
+
+td .controller {
+    margin-left: -4px
+}
+
+.controller {
+    padding-left: 15px
+}
+
+.controller:hover {
+    cursor: pointer
+}
+
+.controller-row {
+    color: #fff;
+    background: #555;
+}
+
+.controller-row a {
+    color: #efefef
+}
+
+.controller-row a:hover {
+    color: #fff
+}
+
+.controller-row.level-1 {
+    color: #f1f1f1;
+    background: #999
+}
+
+.controller-row td {
+    border-top: 1px solid #7e7e7e;
+}
+
+
+.permission-table .level-1 {
+    margin-left: 30px
+}
+
+.permission-table .level-2 {
+    margin-left: 60px
+}
+
+
+
+.btn-group.actions a {
+    margin-right: 10px
+}
+
+.btn-group.actions>.btn-group > a {
+    margin-right: 0
+}
+
+.filter .form-inline .form-group {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.filter .form-inline #searchFilter {
+    margin-left: 10px;
+}
+
+.filter .form-inline .form-group:nth-child(2), .filter .form-inline .form-group:nth-child(3) {
+    margin-left: 0;
+}
+
+.form-inline #bulk-action .form-group {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.form-inline #bulk-action #bulkForm {
+    margin-left: 10px;
+}

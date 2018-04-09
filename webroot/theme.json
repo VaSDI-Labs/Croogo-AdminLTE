@@ -1,0 +1,75 @@
+{
+    "name": "AdminLTE",
+    "description": "AdminLTE - admin theme for Croogo CMS",
+    "screenshot": "screenshot.png",
+    "author": "vadimushka_d",
+    "authorEmail": "vadimushka_d@gmail.com",
+    "authorUrl": "https://vk.com/vadimushka_d",
+    "menus": [
+        "main",
+        "footer"
+    ],
+    "regions": [
+        "right"
+    ],
+    "settings": {
+        "iconDefaults": {
+            "classDefault": "fa",
+            "classPrefix": "fa-",
+            "largeIconClass": ""
+        },
+        "inputDefaults": {
+            "div": {
+                "class": "form-group"
+            },
+            "class": "form-control"
+        },
+        "icons": {
+            "home": "dashboard",
+            "check-mark": "check",
+            "x-mark": "times",
+            "spinner": "refresh",
+            "inspect": "search-plus",
+            "off": "power-off",
+            "picture": "file-picture-o"
+        },
+        "css": {
+            "columnFull": "col-md-12",
+            "columnLeft": "col-md-8",
+            "columnRight": "col-md-4",
+            "row": "row",
+            "dashboardFull": "col-md-12",
+            "dashboardLeft": "col-md-8",
+            "dashboardRight": "col-md-4",
+            "dashboardClass": "connectedSortable",
+            "tableClass": "table table-hover",
+            "thumbnailClass": "img-responsive",
+            "formInput" : "form-control",
+            "formInputDiv" : "form-group"
+        },
+        "prefixes": {
+            "admin": {
+                "helpers": {
+                    "Html": {
+                        "className": "AdminLTEHtml"
+                    },
+                    "Form": {
+                        "className": "AdminLTEForm"
+                    },
+                    "Croogo": {
+                        "className": "AdminLTECroogo"
+                    },
+                    "Meta": {
+                        "className": "AdminLTEMeta"
+                    },
+                    "SettingsForm": {
+                        "className": "AdminLTESettingsForm"
+                    },
+                    "Layout": {
+                        "className": "AdminLTELayout"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+legend {
+    margin-bottom: inherit;
+}
+
+.btn-group > .btn-group .dropdown-menu {
+    margin-top: -20px;
+}
+
+.bulk-action {
+    padding: 10px;
+    border-top: 3px solid #d2d6de;
+    border-bottom: 3px solid #d2d6de;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+table .btn-group a {
+    margin-right: 10px;
+}
+
+table span.label {
+    margin-left: 5px;
+}
+
+table .btn-group a.icon-trash,
+table .btn-group a.delete {
+    color: #dc3545;
+}
+
+@media screen and (min-width: 768px) {
+    .form-inline > .form-group + .form-group,
+    .form-inline > button[type="submit"]{
+        margin-left: 5px;
+    }
+}
+
+
+
+.permission-toggle:hover {
+    cursor: pointer
+}
+
+.permission-toggle.permission-disabled {
+    color: #555;
+    cursor: text
+}
+
+.perm-collapse {
+    padding-left: 15px
+}
+
+.perm-expand {
+    padding-left: 15px
+}
+
+td .controller {
+    margin-left: -4px
+}
+
+.controller {
+    padding-left: 15px
+}
+
+.controller:hover {
+    cursor: pointer
+}
+
+.controller-row {
+    color: #fff;
+    background: #555;
+}
+
+.controller-row a {
+    color: #efefef
+}
+
+.controller-row a:hover {
+    color: #fff
+}
+
+.controller-row.level-1 {
+    color: #f1f1f1;
+    background: #999
+}
+
+.table>tbody>tr.controller-row>td {
+    border-top: 1px solid #7e7e7e
+}
+
+.permission-table .level-1 {
+    margin-left: 30px
+}
+
+.permission-table .level-2 {
+    margin-left: 60px
+}
+
+.permission-table .item-actions a {
+    margin-right: 10px
+}
+
+.permission-table .item-actions a .icon-trash {
+    color: #e44
+}
+
+.permission-table .item-actions a .icon-trash:hover {
+    color: #a40f0f
+}
