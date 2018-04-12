@@ -55,17 +55,4 @@ class AdminLTEHtmlHelper extends CroogoHtmlHelper {
             ]);
         }
     }
-
-    public function tabStart($id, $options = []) {
-        if(!isset($this->_firstShow)){
-            $this->_firstShow = false;
-        }
-        $options = Hash::merge([
-            'class' => ($this->_firstShow) ? "tab-pane" : "tab-pane active",
-            'id' => $id,
-        ], $options);
-        $this->_firstShow = true;
-        return $this->useTag('blockstart', $options);
-    }
-
 }

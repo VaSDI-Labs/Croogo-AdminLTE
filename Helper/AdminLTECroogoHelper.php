@@ -13,7 +13,6 @@ App::uses('CroogoHelper', 'Croogo.View/Helper');
 class AdminLTECroogoHelper extends CroogoHelper {
 
     protected $_firstShow = false;
-    protected $_showActiveTab;
 
     public function adminMenus($menus, $options = [], $depth = 0) {
         $options = Hash::merge([
@@ -121,6 +120,15 @@ class AdminLTECroogoHelper extends CroogoHelper {
         return $this->Html->tag('ul', $out, $htmlAttributes);
     }
 
+    /**
+     * Create an action button
+     *
+     * @param string $title Button title
+     * @param array|string $url URL
+     * @param array $options Options array
+     * @param string|boolean $confirmMessage Confirmation message
+     * @return string
+     */
     public function adminAction($title, $url, $options = [], $confirmMessage = false) {
         $options = Hash::merge([
             'button' => 'default',
@@ -162,48 +170,5 @@ class AdminLTECroogoHelper extends CroogoHelper {
         $this->_firstShow = true;
         return $this->Html->tag('li', $link, $liOptions);
     }
-
-    public function adminTabs($show = null) {
-        if (!isset($this->adminTabs)) {
-            $this->adminTabs = false;
-        }
-        $output = '';
-        $tabs = Configure::read('Admin.tabs.' . Inflector::camelize($this->request->params['controller']) . '/' . $this->request->params['action']);
-        if (is_array($tabs)) { //TODO подумать над тем как добавить класс active
-            foreach ($tabs as $title => $tab) {
-                $tab = Hash::merge([
-                    'options' => [
-                        'linkOptions' => [],
-                        'elementData' => [],
-                        'elementOptions' => [],
-                    ],
-                ], $tab);
-
-                if (!isset($tab['options']['type']) || (isset($tab['options']['type']) && (in_array($this->_View->viewVars['typeAlias'], $tab['options']['type'])))) {
-                    $domId = strtolower(Inflector::singularize($this->request->params['controller'])) . '-' . strtolower(Inflector::slug($title, '-'));
-                    if ($this->adminTabs) {
-
-                        list($plugin, $element) = pluginSplit($tab['element']);
-                        $elementOptions = Hash::merge(['plugin' => $plugin,], $tab['options']['elementOptions']);
-
-                        $class = ($this->_showActiveTab) ? "tab-pane active" : "tab-pane";
-
-                        $output .= $this->Html->div($class,
-                            $this->_View->element($element, $tab['options']['elementData'], $elementOptions),
-                            ['id' => $domId]
-                        );
-                    } else {
-                        $output .= $this->adminTab(__d('croogo', $title), '#' . $domId, $tab['options']['linkOptions']);
-                    }
-                }
-            }
-        }
-
-        $this->adminTabs = true;
-        return $output;
-    }
-
-
-
 
 }

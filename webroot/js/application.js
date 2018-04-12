@@ -9,6 +9,18 @@ const Admin = {
             autoclose: true
         });
 
+
+        $.each($('[data-toggle="tab"]'), function (index, tabLink) {
+            let $tabLink = $(tabLink);
+            let $tabWrapper = $(tabLink).parent();
+            let domId = $tabLink.attr('href');
+
+            if($tabWrapper.hasClass('active')){
+                $(domId).addClass("active");
+            }
+        });
+
+
         $('.datetimepicker').datetimepicker({
             keepOpen: true,
             format: "YYYY-MM-DD HH:mm:ss"
