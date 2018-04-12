@@ -44,6 +44,7 @@ class AdminLTESettingsFormHelper extends SettingsFormHelper {
                 $multiple = $setting['Params']['multiple'];
             }
             $selected = json_decode($setting['Setting']['value']);
+            $selected = empty($selected) ? [] : $selected;
             $options = json_decode($setting['Params']['options'], true);
 
             if($multiple == "checkbox"){
