@@ -7,7 +7,7 @@
  */
 ;(function ($, window, document, undefined ) {
 
-	const defaults = {
+	let defaults = {
 
 		// URL to retrieve autocomplete results
 		url: undefined,
@@ -28,7 +28,7 @@
 		queryField: undefined
 	};
 
-	const pluginName = 'typeahead_autocomplete';
+	let pluginName = 'typeahead_autocomplete';
 
 	function Plugin(element, options) {
 		this.element = element;
@@ -48,11 +48,11 @@
 
 	Plugin.prototype = {
 		init: function (plugin) {
-			const options = plugin.options;
-            const results = [];
-            const map = {};
-            const $rel = $(options.relatedElement);
-            const $element = $(plugin.element);
+			let options = plugin.options;
+            let results = [];
+            let map = {};
+            let $rel = $(options.relatedElement);
+            let $element = $(plugin.element);
 			let originalValues;
 
 			$element
@@ -62,7 +62,7 @@
 						el: this.value
 					};
 				})
-				.on('blur', function(e) {
+				.on('blur', function() {
 					if (this.value.length === 0) {
 						$rel.val('');
 					}
@@ -77,7 +77,7 @@
 				matcher: function (item) {
 					let tQuery = '';
 					if (options.multiple) {
-						const result = /([^,]+)$/.exec(this.query);
+                        let result = /([^,]+)$/.exec(this.query);
 						if (result && result[1]) {
 							tQuery = result[1].trim();
 						}
@@ -92,8 +92,8 @@
 				},
 				updater: function(item) {
 					if (options.multiple) {
-						const data = [];
-						const complete = this.$element.val().replace(/[^,]*$/, '') + item;
+                        let data = [];
+                        let complete = this.$element.val().replace(/[^,]*$/, '') + item;
 						$.each(complete.split(','), function(index, value) {
 							data.push(map[value]);
 						});

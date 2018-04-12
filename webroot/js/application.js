@@ -9,13 +9,20 @@ const Admin = {
             autoclose: true
         });
 
+        let ulNavigation = $('ul[data-widget="tree"]');
+        let activeItemsInNav = $(ulNavigation).find('.active');
+        let parentsActiveItems = $(activeItemsInNav).parents('li');
+
+        $.each(parentsActiveItems, function (i, item) {
+            $(item).addClass('active').addClass('menu-open');
+        });
 
         $.each($('[data-toggle="tab"]'), function (index, tabLink) {
             let $tabLink = $(tabLink);
             let $tabWrapper = $(tabLink).parent();
             let domId = $tabLink.attr('href');
 
-            if($tabWrapper.hasClass('active')){
+            if ($tabWrapper.hasClass('active')) {
                 $(domId).addClass("active");
             }
         });
@@ -30,16 +37,16 @@ const Admin = {
         $('[type="submit"]').on('click', function () {
             const $required = $('.required');
 
-            if($required.length !== 0){
+            if ($required.length !== 0) {
                 let isContinue = false;
 
                 $.each($required, function (i, elem) {
                     const $field = $(elem).find('input[required="required"]:not([type="password"])');
-                    if($field.get(0) !== undefined){
+                    if ($field.get(0) !== undefined) {
                         const errorClass = "has-error";
                         const successClass = "has-success";
 
-                        if($field.val() === ""){
+                        if ($field.val() === "") {
                             $(elem).addClass(errorClass).removeClass(successClass);
 
                             isContinue = false;

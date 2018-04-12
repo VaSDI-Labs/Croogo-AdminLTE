@@ -1,4 +1,4 @@
-<?php /** @var ViewTheme $this */
+<?php /** @var ViewIDE $this */
 
 if (empty($modelClass)) $modelClass = Inflector::singularize($this->name);
 if (!isset($className)) $className = strtolower($this->name);

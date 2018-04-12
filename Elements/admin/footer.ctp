@@ -1,4 +1,4 @@
-<?php /** @var View $this */ ?>
+<?php /** @var ViewIDE $this */ ?>
 <footer class="main-footer">
     <div class="pull-right hidden-xs"><b>Version</b> 2.4.3</div>
     <?php

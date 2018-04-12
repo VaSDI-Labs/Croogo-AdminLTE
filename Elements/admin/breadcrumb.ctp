@@ -1,4 +1,4 @@
-<?php /** @var ViewTheme $this */
+<?php /** @var ViewIDE $this */
 
 echo $this->Html->getCrumbList([
 	'firstClass' => false,

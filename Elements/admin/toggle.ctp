@@ -1,6 +1,6 @@
 <?php
 /**
- * @var ViewTheme $this
+ * @var ViewIDE $this
  * @var integer $id
  * @var integer $status
  */

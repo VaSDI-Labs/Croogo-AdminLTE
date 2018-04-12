@@ -1,4 +1,4 @@
-<?php /** @var ViewTheme $this */ ?>
+<?php /** @var ViewIDE $this */ ?>
 <!-- Main Header -->
 <header class="main-header">
     <!-- Logo -->
