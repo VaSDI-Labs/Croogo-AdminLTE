@@ -21,8 +21,9 @@ class AdminLTEDashboardsHelper extends DashboardsHelper {
         'Html' => ['className' => 'AdminLTEHtml'],
     ];
 
-    public function beforeRender($viewFile) {
-        parent::beforeRender($viewFile);
+    public function __construct(View $View, array $settings = array())
+    {
+        parent::__construct($View, $settings);
 
         $this->_getFeedPost();
     }
@@ -111,7 +112,7 @@ class AdminLTEDashboardsHelper extends DashboardsHelper {
 
     protected function getPosts()
     {
-        $posts = Cache::read('croogo_blog_feed_posts');
+        $posts = Cache::read('croogo_blog_feed_posts', '_cake_core_');
         if ($posts === false) {
             $xml = Xml::build(file_get_contents('https://blog.croogo.org/promoted.rss'));
 
@@ -128,7 +129,7 @@ class AdminLTEDashboardsHelper extends DashboardsHelper {
             }
         }
 
-        Cache::write('croogo_blog_feed_posts', $posts);
+        Cache::write('croogo_blog_feed_posts', $posts, '_cake_core_');
 
         return $posts;
     }
