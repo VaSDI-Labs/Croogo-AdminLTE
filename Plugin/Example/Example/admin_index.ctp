@@ -1,4 +1,4 @@
-<?php /** @var ViewIDE $this */
+<?php /** @var ViewAnnotation $this */
 
 $this->extend('/Common/admin_index');
 $this->Html

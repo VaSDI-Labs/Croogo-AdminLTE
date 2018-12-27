@@ -1,6 +1,6 @@
 <?php
 /**
- * @var ViewIDE $this
+ * @var ViewAnnotation $this
  * @var array $roles
  */
 if (isset($roles[$this->request->data['User']['role_id']])) {

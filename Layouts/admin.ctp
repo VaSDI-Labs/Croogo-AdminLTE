@@ -1,6 +1,6 @@
-<?php /** @var ViewIDE $this */ ?>
+<?php /** @var ViewAnnotation $this */ ?>
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

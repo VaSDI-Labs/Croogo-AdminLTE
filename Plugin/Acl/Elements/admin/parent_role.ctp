@@ -1,4 +1,4 @@
-<?php /** @var ViewIDE $this */
+<?php /** @var ViewAnnotation $this */
 
 echo $this->Form->input('parent_id', [
 	'empty' => true,

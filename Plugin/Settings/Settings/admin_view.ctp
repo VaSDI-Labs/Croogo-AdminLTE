@@ -1,5 +1,6 @@
+
 <?php /**
- * @var ViewIDE $this
+ * @var ViewAnnotation $this
  * @var array $setting
  */ ?>
 <div class="row">

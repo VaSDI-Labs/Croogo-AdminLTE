@@ -1,4 +1,5 @@
-<?php /** @var ViewIDE $this */
+
+<?php /** @var ViewAnnotation $this */
 
 echo $this->Html->script('admin_login', ['inline' => false]);
 echo $this->Html->para('login-box-msg', "Sign in to start your session");

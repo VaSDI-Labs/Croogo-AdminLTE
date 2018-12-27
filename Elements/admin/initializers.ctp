@@ -1,4 +1,4 @@
-<?php
+<?php /** @var ViewAnnotation $this */
 
 $adminThemeScripts =<<<EOF
 	Admin.form();

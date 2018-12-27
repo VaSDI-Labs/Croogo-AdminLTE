@@ -1,4 +1,4 @@
-<?php /** @var ViewIDE $this */ ?>
+<?php /** @var ViewAnnotation $this */ ?>
 <!-- Main Header -->
 <header class="main-header">
     <!-- Logo -->

@@ -1,6 +1,6 @@
 <?php
 /**
- * @var ViewIDE $this
+ * @var ViewAnnotation $this
  * @var integer $id
  * @var integer $status
  */

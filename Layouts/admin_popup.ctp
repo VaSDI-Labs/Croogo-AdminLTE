@@ -1,4 +1,4 @@
-<?php /** @var ViewIDE $this */ ?>
+<?php /** @var ViewAnnotation $this */ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

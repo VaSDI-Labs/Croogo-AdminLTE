@@ -1,6 +1,6 @@
 <?php
 /**
- * @var ViewIDE $this
+ * @var ViewAnnotation $this
  * @var array $menus
  * @var integer $menuId
  * @var array $parentLinks

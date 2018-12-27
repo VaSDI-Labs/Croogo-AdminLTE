@@ -1,6 +1,7 @@
+
 <?php
 /**
- * @var ViewIDE $this
+ * @var ViewAnnotation $this
  * @var array $type
  */
 echo $this->Form->input('comment_status', [

@@ -1,5 +1,4 @@
-<?php /** @var ViewIDE $this */ ?>
-
+<?php /** @var ViewAnnotation $this */ ?>
 <div class="row">
     <div class="col-sm-7">
         <p><?php echo $this->Paginator->counter([

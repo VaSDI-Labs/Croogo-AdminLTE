@@ -1,5 +1,6 @@
+
 <?php /**
- * @var ViewIDE $this
+ * @var ViewAnnotation $this
  * @var array $languages
  * @var integer $id
  * @var string $modelAlias

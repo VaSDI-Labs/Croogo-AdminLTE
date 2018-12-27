@@ -1,4 +1,5 @@
-<?php /** @var ViewIDE $this */
+
+<?php /** @var ViewAnnotation $this */
 
 echo $this->Form->create('Message', [
     'novalidate' => true,

@@ -1,4 +1,4 @@
-<?php /** @var ViewIDE $this */ ?>
+<?php /** @var ViewAnnotation $this */ ?>
 
 <div id="meta-fields"><?php
 	if (!empty($this->request->data['Meta'])) {

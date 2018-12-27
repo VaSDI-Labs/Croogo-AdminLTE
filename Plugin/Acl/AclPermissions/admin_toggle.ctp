@@ -1,6 +1,6 @@
 <?php
 /**
- * @var ViewIDE $this
+ * @var ViewAnnotation $this
  * @var mixed $success
  * @var mixed $permitted
  * @var string|integer $acoId

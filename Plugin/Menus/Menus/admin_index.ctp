@@ -1,6 +1,7 @@
+
 <?php
 /**
- * @var ViewIDE $this
+ * @var ViewAnnotation $this
  * @var array $menus
  */
 $this->extend('/Common/admin_index');

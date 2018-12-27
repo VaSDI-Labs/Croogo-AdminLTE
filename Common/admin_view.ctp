@@ -1,4 +1,4 @@
-<?php /** @var ViewIDE $this */
+<?php /** @var ViewAnnotation $this */
 
 if (empty($modelClass)) $modelClass = Inflector::singularize($this->name);
 if (!isset($className)) $className = strtolower($this->name);

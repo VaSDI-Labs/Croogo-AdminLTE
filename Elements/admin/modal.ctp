@@ -1,4 +1,4 @@
-<?php
+<?php /** @var ViewAnnotation $this */
 $title = isset($title) ? $title : null;
 if (empty($id)) {
 	$id = 'modal';

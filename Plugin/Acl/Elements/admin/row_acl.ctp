@@ -1,4 +1,4 @@
-<?php /** @var ViewIDE $this */
+<?php /** @var ViewAnnotation $this */
 
 $rolePermissions = empty($rolePermissions) ? [] : $rolePermissions;
 if(!empty($rolePermissions)){

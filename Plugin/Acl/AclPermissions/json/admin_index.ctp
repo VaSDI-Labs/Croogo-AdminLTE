@@ -1,6 +1,6 @@
 <?php
 /**
- * @var ViewIDE $this
+ * @var ViewAnnotation $this
  * @var array $permissions
  */
 if (isset($this->request->query['urls'])) {
