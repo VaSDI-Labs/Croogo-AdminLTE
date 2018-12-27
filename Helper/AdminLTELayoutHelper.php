@@ -7,7 +7,7 @@ App::uses('LayoutHelper', 'Croogo.View/Helper');
  * Date: 20.02.2018
  * Time: 0:11
  *
- * @property ViewTheme $_View
+ * @property \ViewAnnotation $_View
  * @property ThemeHelper $Theme
  * @property AdminLTEHtmlHelper $Html
  */

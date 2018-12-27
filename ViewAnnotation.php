@@ -54,5 +54,6 @@
 * @property AdminLTELayoutHelper $AdminLTELayout
 * @property AdminLTEMetaHelper $AdminLTEMeta
 * @property AdminLTESettingsFormHelper $AdminLTESettingsForm
+* @property \CrudAdminIndexHelper $CrudAdminIndex
 */
 class ViewAnnotation extends View {}
