@@ -64,7 +64,7 @@ class CrudAdminIndexHelper extends AppHelper
 			$tableHeaders = [];
 			foreach ($this->displayFields as $field => $arr) {
 				$label = __d($this->i18nDomain, $arr['label']);
-				$tableHeaders[] = $arr['sort'] ? $this->Paginator->sort($field, $label) : $label;
+				$tableHeaders[] = $arr['sort'] ? $this->Paginator->sort($field, $label, ['class' => 'paginator-link']) : $label;
 			}
 			$tableHeaders[] = __d('croogo', 'Actions');
 			$defaultTableHeading = $this->Html->tableHeaders($tableHeaders);

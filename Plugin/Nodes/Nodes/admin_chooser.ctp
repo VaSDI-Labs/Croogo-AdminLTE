@@ -1,4 +1,3 @@
-
 <?php
 /**
  * @var ViewAnnotation $this
@@ -124,44 +123,16 @@ $tableBody = $this->Html->tableCells($rows);
     </div>
 </div>
 <script>
-    function ajaxRequest(url, data){
-        let ajaxOption = {
-            url: url,
-            dataType: "html",
-            success: function (data) {
-                $('.modal').find('.modal-body').html($(data).find('.content-wrapper > .content').html());
-            }
-        };
-
-        if(data !== undefined) ajaxOption.data = data;
-
-        $.ajax(ajaxOption);
-    }
     $(function () {
         $('.popovers').popover();
 
-        const modalPopup = $('.modal');
-        modalPopup.find('.modal-dialog').addClass('modal-lg');
+        Admin.modalLarge();
+        Admin.chooserUpdate('#NodeIndexForm', {
+			chooser: $('#NodeChooser').val(),
+			filter: $('#NodeFilter').val()
+		});
 
-        $('body').on('click', function () {
-            if (!modalPopup.hasClass('in')) {
-                modalPopup.find('.modal-dialog').removeClass('modal-lg');
-            }
-        });
 
-        $('#NodeIndexForm').on('submit', function (e) {
-            e.preventDefault();
-            const data = {
-                chooser: $('#NodeChooser').val(),
-                filter: $('#NodeFilter').val()
-            };
-            ajaxRequest($(this).attr('action'), data);
-        });
-
-        $('.pagination').on('click', 'li a', function (e) {
-            e.preventDefault();
-            ajaxRequest($(this).attr('href'));
-        });
 
         $('#chooserTable').DataTable({
             'paging': false,

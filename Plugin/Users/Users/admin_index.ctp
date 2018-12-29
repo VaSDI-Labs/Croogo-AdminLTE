@@ -7,5 +7,20 @@ $this->Html
 	->addCrumb(__d('croogo', 'Users'));
 
 if (isset($this->request->query['chooser'])):
-	$this->Html->script(['Users.admin_index'], ['inline' => false]);
+	$this->start('page-footer');
+
+	echo <<<HTML
+<script>
+	$(function () {
+		Admin.modalLarge();
+		Admin.chooserUpdate();
+		Admin.chooserUpdate('#UserAdminIndexForm', {
+			chooser: $('#UserChooser').val(),
+			role_id: $('#UserRoleId').val(),
+			name: $('#UserName').val()
+		});
+	});
+</script>
+HTML;
+	$this->end();
 endif;

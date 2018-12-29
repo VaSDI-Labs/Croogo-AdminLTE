@@ -180,5 +180,40 @@ const Admin = {
         }
         result += Croogo.themeSettings.iconDefaults['classPrefix'] + icon;
         return result.trim();
-    }
+    },
+	modalLarge(){
+		const modalPopup = $('.modal');
+		modalPopup.find('.modal-dialog').addClass('modal-lg');
+
+		$('body').on('click', function () {
+			if (!modalPopup.hasClass('in')) {
+				modalPopup.find('.modal-dialog').removeClass('modal-lg');
+			}
+		});
+	},
+	chooserUpdate(id, data){
+
+		$(id).on('submit', function (e) {
+			e.preventDefault();
+			Admin.ajaxRequest($(this).attr('action'), data);
+		});
+
+		$('.paginator-link').on('click', function (e) {
+			e.preventDefault();
+			Admin.ajaxRequest($(this).attr('href'));
+		});
+	},
+	ajaxRequest(url, data) {
+		let ajaxOption = {
+			url: url,
+			dataType: "html",
+			success: function (data) {
+				$('.modal').find('.modal-body').html($(data).find('.content-wrapper > .content').html());
+			}
+		};
+
+		if(data !== undefined) ajaxOption.data = data;
+
+		$.ajax(ajaxOption);
+	}
 };

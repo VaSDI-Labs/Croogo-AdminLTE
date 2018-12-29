@@ -10,7 +10,7 @@ App::uses('AppHelper', 'View/Helper');
  * @property AdminLTEHtmlHelper $Html
  * @property ThemeHelper $Theme
  * @property AdminLTECroogoHelper $Croogo
- * @property ViewTheme $_View
+ * @property \ViewAnnotation $_View
  * @property PaginatorHelper $Paginator
  * @property LayoutHelper $Layout
  */
